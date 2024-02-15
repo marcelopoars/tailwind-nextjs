@@ -1,4 +1,5 @@
-import { LogOut } from 'lucide-react'
+import { LogOut } from "lucide-react";
+import { Button } from "../..";
 
 export function Profile() {
   return (
@@ -6,24 +7,23 @@ export function Profile() {
       <img
         src="https://github.com/marcelopoars.png"
         alt="Foto de Marcelo Pereira"
-        className="w-10 h-10 rounded-full"
+        className="h-10 w-10 rounded-full"
       />
 
-      <div className="flex flex-col text-sm truncate">
-        <span className="font-semibold text-zinc-700">Marcelo Pereira</span>
+      <div className="flex flex-col truncate text-sm">
+        <span className="font-semibold text-zinc-700 dark:text-zinc-100">
+          Marcelo Pereira
+        </span>
         <p
           title="marcelo.fatecpoa@gmail.com"
-          className="text-zinc-500 truncate"
+          className="truncate text-zinc-500 dark:text-zinc-400"
         >
           marcelo.fatecpoa@gmail.com
         </p>
       </div>
-      <button
-        type="button"
-        className="ml-auto mb-auto p-2 rounded-md hover:bg-zinc-50"
-      >
-        <LogOut className="h-5 w-5 text-zinc-500" />
-      </button>
+      <Button type="button" variant="ghost">
+        <LogOut className="size-5" />
+      </Button>
     </div>
-  )
+  );
 }
