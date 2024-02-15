@@ -4,6 +4,7 @@ import {
   Button,
   FileInput,
   Input,
+  Label,
   Select,
   SelectItem,
   SettingsTabs,
@@ -13,14 +14,18 @@ import {
 export default function Home() {
   return (
     <>
-      <h1 className="text-3xl font-medium text-zinc-900 dark:text-zinc-100">Settings</h1>
+      <h1 className="text-3xl font-medium text-zinc-900 dark:text-zinc-100">
+        Settings
+      </h1>
 
       <SettingsTabs />
 
       <div className="pt-6">
         <div className="flex flex-col gap-4 pb-5 lg:flex-row lg:items-center lg:justify-between">
           <div className="space-y-1">
-            <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">Personal info</h2>
+            <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">
+              Personal info
+            </h2>
             <p className="text-sm text-zinc-500 dark:text-zinc-400">
               Update your photo and personal details here.
             </p>
@@ -36,14 +41,12 @@ export default function Home() {
           </div>
         </div>
 
-        <form id="settings" className="divide-y divide-zinc-200 dark:divide-zinc-700">
+        <form
+          id="settings"
+          className="divide-y divide-zinc-200 dark:divide-zinc-700"
+        >
           <div className="grid gap-6 border-t border-zinc-200 py-5 lg:grid-cols-form dark:border-zinc-700">
-            <label
-              htmlFor="firstName"
-              className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
-            >
-              Name
-            </label>
+            <Label htmlFor="firstName">Name</Label>
 
             <div className="grid gap-6 lg:grid-cols-2">
               <Input.Root>
@@ -55,12 +58,9 @@ export default function Home() {
                 />
               </Input.Root>
 
-              <label
-                htmlFor="lasttName"
-                className="text-sm font-medium text-zinc-700 dark:text-zinc-300 lg:sr-only"
-              >
+              <Label htmlFor="lasttName" className="lg:sr-only">
                 Lastname
-              </label>
+              </Label>
 
               <Input.Root>
                 <Input.Control
@@ -74,12 +74,7 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 py-5 lg:grid-cols-form">
-            <label
-              htmlFor="email"
-              className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
-            >
-              Email address
-            </label>
+            <Label htmlFor="email">Email address</Label>
 
             <div>
               <Input.Root>
@@ -97,15 +92,12 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 py-5 lg:grid-cols-form">
-            <label
-              htmlFor="yourPhoto"
-              className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
-            >
+            <Label htmlFor="yourPhoto">
               Your photo
               <span className="mt-0.5 block text-zinc-500">
                 This will be displayed on your profile.
               </span>
-            </label>
+            </Label>
 
             <FileInput.Root className="flex flex-col gap-5 lg:flex-row lg:items-start">
               <FileInput.ImagePreview />
@@ -115,9 +107,7 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 py-5 lg:grid-cols-form">
-            <label htmlFor="role" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
-              Role
-            </label>
+            <Label htmlFor="role">Role</Label>
 
             <div>
               <Input.Root>
@@ -132,12 +122,7 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 py-5 lg:grid-cols-form">
-            <label
-              htmlFor="country"
-              className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
-            >
-              Country
-            </label>
+            <Label htmlFor="country">Country</Label>
             <Select placeholder="Select a country">
               <SelectItem value="br" text="Brazil" />
               <SelectItem value="us" text="United State" />
@@ -145,12 +130,7 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 py-5 lg:grid-cols-form">
-            <label
-              htmlFor="timezone"
-              className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
-            >
-              Timezone
-            </label>
+            <Label htmlFor="timezone">Timezone</Label>
             <Select placeholder="Select a timezone">
               <SelectItem value="utc-3" text="America/Sao_Paulo (UTC-03:00)" />
               <SelectItem
@@ -161,12 +141,12 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 py-5 lg:grid-cols-form">
-            <label htmlFor="bio" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+            <Label htmlFor="bio">
               Bio
               <span className="mt-0.5 block text-zinc-500">
                 Write a short introduction.
               </span>
-            </label>
+            </Label>
             <div className="space-y-3">
               <div className="grid gap-3 lg:grid-cols-2">
                 <Select
@@ -205,15 +185,12 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 py-5 lg:grid-cols-form">
-            <label
-              htmlFor="portfolioProjects"
-              className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
-            >
+            <Label htmlFor="portfolioProjects">
               Portfolio projects
               <span className="mt-0.5 block text-zinc-500">
                 Share a few snippets of your work.
               </span>
-            </label>
+            </Label>
 
             <FileInput.Root>
               <FileInput.Trigger htmlFor="portfolioProjects" />

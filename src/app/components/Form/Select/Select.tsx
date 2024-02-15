@@ -23,12 +23,11 @@ export function Select({ placeholder, children, ...props }: SelectProps) {
         )}
       >
         <SelectRadix.Value
-          className="text-black"
           placeholder={placeholder}
           aria-placeholder={placeholder}
         />
         <SelectRadix.Icon>
-          <ChevronDown className="size-5 to-zinc-500" />
+          <ChevronDown className="size-5 text-zinc-500" />
         </SelectRadix.Icon>
       </SelectRadix.Trigger>
 
