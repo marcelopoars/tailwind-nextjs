@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Sidebar } from "./components";
+import { Main, Sidebar } from "./components";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,12 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="antialiased">
-      <body className={`${inter.className}`}>
-        <div className="min-h-screen lg:grid lg:grid-cols-app dark:bg-zinc-900">
+      <body
+        className={`${inter.className} h-svh bg-white lg:overflow-hidden dark:bg-zinc-900`}
+      >
+        <div className="mx-auto h-svh max-w-7xl lg:grid lg:grid-cols-app dark:bg-zinc-900">
           <Sidebar />
-          <main className="px-4 pb-12 pt-24 lg:col-start-2 lg:px-8 lg:pt-8">
-            {children}
-          </main>
+          <Main>{children}</Main>
         </div>
       </body>
     </html>
